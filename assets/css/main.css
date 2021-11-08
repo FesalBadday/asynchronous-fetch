@@ -1,0 +1,66 @@
+body {
+  background-color: #03381c;
+  text-align: center;
+  text-shadow: 2.5px 2.5px #000000;
+  color: #b19131;
+  font-family: 'Oleo Script', cursive;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 6rem;
+}
+
+button {
+  font-family: 'Oleo Script', cursive;
+  padding: 1.5rem 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  background-color: #0ab7dd;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: #000 0px 0px 48px 0px inset, #000 0px 0px 0px 1px inset;
+}
+
+button:hover {
+  background-color: #cead4c;
+}
+
+.cards img:hover {
+  transform: scale(1.2);
+}
+
+.error img {
+  width: 35%;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 2vw, 5rem);
+}
+
+legend {
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-size: clamp(1.8rem, 2vw, 3.5rem);
+  color: #0ab7dd;
+  box-shadow: #000 0px 0px 48px 0px inset, #000 0px 0px 0px 1px inset;
+  border-radius: 1rem;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d80d0d;
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: bold;
+}
