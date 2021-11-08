@@ -51,10 +51,10 @@ const fetchCards = async () => {
     // rename button
     randomCards.textContent = 'Shuffle Cards'
 
-  } catch { // catch errors
+  } catch(err) { // catch errors
     // rename button
     randomCards.textContent = 'Try Again'
-
+    console.log(err)
     // print error message
     errorMsg.innerHTML =
       `An error occurred while loading cards. Please try again later.
