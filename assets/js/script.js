@@ -51,7 +51,7 @@ const fetchCards = async () => {
     // rename button
     randomCards.textContent = 'Shuffle Cards'
 
-  } catch(err) { // catch errors
+  } catch (err) { // catch errors
     // rename button
     randomCards.textContent = 'Try Again'
     console.log(err)
