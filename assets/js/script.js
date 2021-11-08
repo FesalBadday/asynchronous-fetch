@@ -12,11 +12,26 @@ const errorMsg = document.querySelector('.error')
 const fetchCards = async () => {
   try {
     let response = await fetch('https://deckofcardsapi.com/api/deck/new/shuffle')
-    let data = await response.json() // return json file with id
+    let data = null
+
+    // check if response is ok
+    if (!response.ok) {
+      // if not throw an error
+      throw new Error('Not 200 OK');
+    } else {
+      data = await response.json() // return json file with id
+    }
 
     // load the cards
     response = await fetch(`https://deckofcardsapi.com/api/deck/${data.deck_id}/draw/?count=52`)
-    data = await response.json() // return json file with array of 52 cards
+
+    // check if response is ok
+    if (!response.ok) {
+      // if not throw an error
+      throw new Error('Not 200 OK');
+    } else {
+      data = await response.json() // return json file with array of 52 cards
+    }
 
     const cardsSection = document.querySelector(".cards")
 
@@ -54,7 +69,7 @@ const fetchCards = async () => {
   } catch (err) { // catch errors
     // rename button
     randomCards.textContent = 'Try Again'
-    console.log(err)
+    console.log('Caught an error!', err)
     // print error message
     errorMsg.innerHTML =
       `An error occurred while loading cards. Please try again later.
