@@ -1,4 +1,4 @@
-# Assignment 3 refactored to use async/await and try/catch
+# Async/await and try/catch
 
 ---
 
